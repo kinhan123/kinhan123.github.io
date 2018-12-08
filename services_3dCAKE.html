@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFCC00;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ this fixed width container surrounds the other divs ~~ */
+.container {
+	width: 960px;
+	background-color: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background-color: #FFCC00;
+	height: 300px;
+}
+
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+
+.content {
+
+	padding: 10px 0;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #FF9933;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+#apDiv1 {
+	position: absolute;
+	left: 271px;
+	top: 161px;
+	width: 960px;
+	height: 115px;
+	z-index: 1;
+}
+#apDiv2 {
+	position: absolute;
+	left: 571px;
+	top: 14px;
+	width: 438px;
+	height: 121px;
+	z-index: 2;
+}
+#apDiv3 {
+	position: absolute;
+	left: 276px;
+	top: 239px;
+	width: 235px;
+	height: 55px;
+	z-index: 3;
+}
+#apDiv4 {
+	position: absolute;
+	left: 575px;
+	top: 239px;
+	width: 181px;
+	height: 48px;
+	z-index: 4;
+}
+#apDiv5 {
+	position: absolute;
+	left: 791px;
+	top: 239px;
+	width: 168px;
+	height: 48px;
+	z-index: 5;
+}
+#apDiv6 {
+	position: absolute;
+	left: 1039px;
+	top: 236px;
+	width: 177px;
+	height: 47px;
+	z-index: 6;
+}
+#apDiv7 {
+	position: absolute;
+	left: 272px;
+	top: 330px;
+	width: 1000px;
+	height: 300px;
+	z-index: 7;
+}
+#apDiv8 {
+	position: absolute;
+	left: 271px;
+	top: 647px;
+	width: 1000px;
+	height: 222px;
+	z-index: 8;
+}
+#apDiv9 {
+	position: absolute;
+	left: 312px;
+	top: 967px;
+	width: 913px;
+	height: 227px;
+	z-index: 9;
+}
+#apDiv10 {
+	position: absolute;
+	left: 268px;
+	top: 1299px;
+	width: 904px;
+	height: 367px;
+	z-index: 10;
+}
+#apDiv11 {
+	position: absolute;
+	left: 344px;
+	top: 306px;
+	width: 917px;
+	height: 408px;
+	z-index: 11;
+}
+#apDiv12 {
+	position: absolute;
+	left: 260px;
+	top: 301px;
+	width: 1008px;
+	height: 549px;
+	z-index: 12;
+}
+#apDiv13 {
+	position: absolute;
+	left: 601px;
+	top: 313px;
+	width: 318px;
+	height: 85px;
+	z-index: 13;
+}
+#apDiv14 {
+	position: absolute;
+	left: 366px;
+	top: 711px;
+	width: 283px;
+	height: 250px;
+	z-index: 14;
+}
+#apDiv15 {
+	position: absolute;
+	left: 890px;
+	top: 705px;
+	width: 273px;
+	height: 260px;
+	z-index: 15;
+}
+#apDiv16 {
+	position: absolute;
+	left: 890px;
+	top: 996px;
+	width: 277px;
+	height: 239px;
+	z-index: 16;
+}
+#apDiv17 {
+	position: absolute;
+	left: 366px;
+	top: 994px;
+	width: 282px;
+	height: 258px;
+	z-index: 17;
+}
+#apDiv18 {
+	position: absolute;
+	left: 663px;
+	top: 867px;
+	width: 198px;
+	height: 194px;
+	z-index: 18;
+}
+#apDiv19 {
+	position: absolute;
+	left: 912px;
+	top: 1084px;
+	width: 176px;
+	height: 135px;
+	z-index: 19;
+}
+#apDiv20 {
+	position: absolute;
+	left: 387px;
+	top: 782px;
+	width: 185px;
+	height: 133px;
+	z-index: 20;
+}
+#apDiv21 {
+	position: absolute;
+	left: 913px;
+	top: 779px;
+	width: 195px;
+	height: 125px;
+	z-index: 21;
+}
+#apDiv22 {
+	position: absolute;
+	left: 388px;
+	top: 1080px;
+	width: 203px;
+	height: 104px;
+	z-index: 22;
+}
+#apDiv23 {
+	position: absolute;
+	left: 406px;
+	top: 714px;
+	width: 723px;
+	height: 502px;
+	z-index: 14;
+}
+#apDiv24 {
+	position: absolute;
+	left: 498px;
+	top: 787px;
+	width: 219px;
+	height: 177px;
+	z-index: 15;
+}
+#apDiv25 {
+	position: absolute;
+	left: 781px;
+	top: 782px;
+	width: 251px;
+	height: 185px;
+	z-index: 16;
+}
+#apDiv26 {
+	position: absolute;
+	left: 471px;
+	top: 1031px;
+	width: 254px;
+	height: 184px;
+	z-index: 17;
+}
+#apDiv27 {
+	position: absolute;
+	left: 773px;
+	top: 1031px;
+	width: 258px;
+	height: 183px;
+	z-index: 18;
+}
+#apDiv28 {
+	position: absolute;
+	left: 769px;
+	top: 971px;
+	width: 270px;
+	height: 48px;
+	z-index: 19;
+}
+#apDiv29 {
+	position: absolute;
+	left: 606px;
+	top: 727px;
+	width: 276px;
+	height: 48px;
+	z-index: 20;
+}
+#apDiv30 {
+	position: absolute;
+	left: 444px;
+	top: 1226px;
+	width: 290px;
+	height: 37px;
+	z-index: 21;
+}
+#apDiv31 {
+	position: absolute;
+	left: 435px;
+	top: 970px;
+	width: 265px;
+	height: 53px;
+	z-index: 22;
+}
+-->
+</style>
+</head>
+
+<body>
+
+<div id="apDiv1"><img src="picture/jpeg.png/banner small.png" width="979" height="140" /></div>
+<div id="apDiv2"><a href="file:///C:/Users/NG/Desktop/new%20web/index.html"><img src="picture/jpeg.png/logo.png" width="400" height="187" /></a></div>
+<div id="apDiv3"><a href="file:///C:/Users/NG/Desktop/new%20web/about%20us.html"><img src="picture/jpeg.png/about us.png" width="240" height="36" /></a></div>
+<div id="apDiv4"><a href="file:///C:/Users/NG/Desktop/new%20web/menu.html"><img src="picture/jpeg.png/Menu.png" width="150" height="36" /></a></div>
+<div id="apDiv5"><a href="file:///C:/Users/NG/Desktop/new%20web/services.html"><img src="picture/jpeg.png/services.png" width="200" height="32" /></a></div>
+<div id="apDiv6"><a href="file:///C:/Users/NG/Desktop/new%20web/contact%20us.html"><img src="picture/jpeg.png/contact.png" width="200" height="32" /></a></div>
+<div id="apDiv10"><img src="picture/jpeg.png/details box.png" width="1000" height="375" /></div>
+<div id="apDiv11"><img src="picture/jpeg.png/grey back.png" width="835" height="961" /></div>
+<div id="apDiv12"><img src="picture/jpeg.png/shop bread.png" width="1000" height="406" /></div>
+<div id="apDiv13"><img src="picture/jpeg.png/services white.png" width="300" height="64" /></div>
+<div id="apDiv23"><img src="picture/jpeg.png/window.png" width="700" height="611" /></div>
+<div id="apDiv24"><img src="picture/jpeg.png/product/DIY cakes/3D cakes/22089456_1103460249789017_4591639490605089905_n.jpg" width="200" height="242" /></div>
+<div id="apDiv25"><img src="picture/jpeg.png/product/DIY cakes/3D cakes/22090160_1103451283123247_407262687964167793_n.jpg" width="250" height="258" /></div>
+<div id="apDiv26"><img src="picture/jpeg.png/product/DIY cakes/3D cakes/37160876_1341648865970153_4705063147222859776_n.jpg" width="250" height="259" /></div>
+<div id="apDiv27"><img src="picture/jpeg.png/product/DIY cakes/3D cakes/29597690_1242928842508823_6593094916696658413_n.jpg" width="250" height="235" /></div>
+<div id="apDiv29"><img src="picture/jpeg.png/different types.png" width="300" height="43" /></div>
+<div class="container">
+  <div class="header"><!-- end .header --></div>
+  <div class="content">
+    <h1>&nbsp;</h1>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p><!-- end .content --></p>
+  </div>
+  <div class="footer">
+    <p>--------------------------@Copyright 2018 Happyland CakeHouse Sdn. Bhd All rights reserved-------------------------</p>
+  <!-- end .footer --></div>
+<!-- end .container --></div>
+</body>
+</html>
